@@ -5,57 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/bootstrap.min.css.map">
     <title>Document</title>
 </head>
 <body>
+    <!-- En el encabezado se encuentra el logo y la navegación, hasta los botones de redireccionamiento -->
     <header>
-        <div class="contLogo">
-            <img src="Recursos/logos/WhatsApp Image 2021-07-08 at 12.42.50 (1).jpeg" class="logoaDabb" alt="No se puede cargar la imagen">
-        </div>
-        <div class="contNavMobile">
-            <div><img class="imgNav" src= "Recursos/logos/menu.png" alt=""></div>
-            <div><img class="imgNav" src= "Recursos/logos/perfil.png" alt=""></div>
-            <div><img class="imgNav" src= "Recursos/logos/busqueda.png" alt=""></div>
-            <div><img class="imgNav" src= "Recursos/logos/outline_shopping_cart_white_24dp.png" alt=""></div>
-
-        </div>
-        <nav class="contenedorNav">
-            <div class="contBarra">
-                <input class="barraBusqueda" type="text">
+        <!-- Este es el menú que se va a mostrar con el formato Mobile -->
+        <section class="seccionMobile">
+            <div class="contLogo">
+                <img src="Recursos/logos/Logo Beige.jpeg" class="logoaDabb" alt="No se puede cargar la imagen">
             </div>
-            <div class="contBotones">
-                <button class="ingresoUsuario">Ingreso</button>
-                <button class="registroUsuario">Registro</button>
+                <!-- Menú que se va a mostrar en el formato Mobile. -->
+                
+                <div class="contNavMobile"> <!--Menú con botones-->
+                    <button class="btnMobile" id="menuHamb"><img class="imgNav" src="Recursos/logos/menu black.png" alt=""></button>
+                    <button class="btnMobile"><img class="imgNav" src= "Recursos/logos/perfil black.png" alt=""></button>
+                    <button class="btnMobile"><img class="imgNav" src= "Recursos/logos/busqueda black.png" alt=""></button>
+                    <button class="btnMobile"><img class="imgNav" src= "Recursos/logos/carrito black.png" alt=""></button>
+                </div>
+                <div class="contListaNone"> <!--Esta es la lista del menú hamburguesa.-->
+                    <ul class= "listaDesk">
+                    <li>
+                       <a class="anclaLista" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li>
+                        <a class="anclaLista" href="#servicios">Servicios</a>
+                    </li>
+                    <li>
+                        <a class="anclaLista" href="#productos">Productos</a>
+                    </li>
+                    <li>
+                        <a class="anclaLista" href="#contacto">Contacto</a>
+                    </li>
+                    <li>
+                        <a class="anclaLista" href="#promociones">Promociones</a>
+                    </li>
+                    <li>
+                        <a href="#comoComprar">Cómo comprar</a>
+                    </li>
+                    </ul>
+                
             </div>
-            <div class="contCarritoCompras">
-                <button>Cotizá tu pedido</button>
-                <img src="Recursos/logos/icons8-carrito-de-la-compra-cargado-64.png" alt="">
+            <div class="contProductosMobile">
+                 <button class="divProductos uno" ><img class="botones" src="Recursos/imgagenes/Alimentos.jpg" alt=""></button>
+                 <button class="divProductos dos"><img class="botones" src="Recursos/imgagenes/Bebidas.jpg" alt=""></button>
+                 <button class="divProductos tres"><img class="botones" src="Recursos/imgagenes/Golosinas.jpeg" alt=""></button>
+                 <button class="divProductos cuatro"><img class="botones" src="Recursos/imgagenes/Limpieza.jpeg" alt=""></button>
+                 <button class="divProductos seis"><img class="botones" src="Recursos/imgagenes/Perfumería.jpeg" alt=""></button>
+                 <button class="divProductos cinco"><img class="botones" src="Recursos/imgagenes/Ofertas.jpeg" alt=""></button>
+                  
             </div>
-        </nav>
-        <nav class="contMenu">
-            <ul>
-                <li>Nosotros</li>
-                <li>Servicios</li>
-                <li>Productos</li>
-                <li>Contacto</li>
-                <li>Promociones</li>
-                <li>otraCosa</li>
-            </ul>
-        </nav>
+        </section>
+        <!-- Este es el navegador que se muestra en fotmato desktop -->
+        <section class="seccionDesk">
+            <nav class="contenedorNav">
+                <div>
+                    <img class= "logoDabb" src="Recursos/logos/Logo Beige.jpeg" alt="">
+                </div>
+                <div class="contBarra">
+                    <input class="barraBusqueda" type="search" placeholder="buscar">
+                        <button class="botonBusqueda" type="submit">
+                            <img class="lupa" src="Recursos/logos/lupa beige.png" alt="">
+                        </button>
+                </div>
+                <div class="contBotones">
+                    <button class="ingresoUsuario letraBtn">ingreso</button>
+                    <button class="registroUsuario letraBtn">registro</button>
+                </div>
+                <div class="contCarritoCompras">
+                    <button class="btnCarrito">
+                        <img class="carritoDesk" src="Recursos/logos/carrito beige.png" alt="">
+                    </button>
+                </div>
+            </nav>
+            <nav class="contMenu" id="menuLista">
+                <ul class= "contLista">
+                    <li>nosotros</li>
+                    <li>servicios</li>
+                    <li>productos</li>
+                    <li>contacto</li>
+                    <li>promociones</li>
+                    <li>como comprar</li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <section class="contProductosMobile">
-        <div class="divProductos1 uno" ><h3>Alimentos</h3></div>
-        <div class="divProductos1 dos"><h3>Golosinas</h3></div>
-        <div class="divProductos1 tres"><h3>Bebidas</h3></div>
-        <div class="divProductos2 cuatro"><h3>Perfumería</h3></div>
-        <div class="divProductos2 cinco"><h3>Limpieza</h3></div>
-    </section>
-    <section class="contNosotros secciones"><h3>Nosotros</h3></section>
-    <section class="contServicios secciones"><h3>Servicios</h3></section>
-    <section class="contProductos secciones"><h3>Productos</h3></section>
-    <section class="contContacto secciones"><h3>Contacto</h3></section>
-    <section class="contPromociones secciones"><h3>Promociones</h3></section>
-    <section class="contOtraCosa secciones"><h3>Otra cosa</h3></section>
+    
+
+    <section class="contNosotros secciones" id="nosotros"><h3>Nosotros</h3></section>
+    <section class="contServicios secciones" id="servicios"><h3>Servicios</h3></section>
+    <section class="contProductos secciones" id="productos"><h3>Productos</h3></section>
+    <section class="contContacto secciones" id="contacto"><h3>Contacto</h3></section>
+    <section class="contPromociones secciones" id="promociones"><h3>Promociones</h3></section>
+    <section class="contOtraCosa secciones" id="comoComprar"><h3>Cómo comprar</h3></section>
     <footer>Redes</footer>
     <script src="JavaScript/principal.js"></script>
 </body>

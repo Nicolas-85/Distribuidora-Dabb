@@ -6,12 +6,10 @@
 
 body {
     padding: 2px;
-    background-color: gray;
+    background-color: black;
+    font-family: 'Encode Sans SC', sans-serif;
+    
 }
-
-/* div {
-    background-color: black  ;
-} */
 
 .contLogo .logoaDabb {
     width: 100%;
@@ -20,20 +18,49 @@ body {
 
 .contNavMobile {
     display: flex;
-    background-color: black;
+    background-color: #c8a260;
     margin-top: 2px;
     border-radius: 5px;
-    justify-content: space-between;
+    padding-top: 3px;
+    justify-content: space-around;
+}
+
+.contListaNone{
+    display: none;
+    background-color: #c8a260;
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 5px;
+    margin-left: 5px;
+    z-index: 100;
+    position: absolute;
+}
+
+.contListaNone.mostrar{
+    display: block;
+}
+
+.listaDesk{
+    padding-left: 5px;
+    
+}
+
+.listaDesk li{
+    cursor: pointer;
+}
+
+.btnMobile {
+    background-color: #c8a260;
+    border-style: none;
+    cursor: pointer;
 }
 
 .contNavMobile .imgNav {
     width: 35px;
     cursor: pointer;
 }
-.contenedorNav {
-    display: none;
-}
-.contMenu {
+
+.seccionDesk {
     display: none;
 }
 
@@ -43,31 +70,141 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.contProductosMobile .divProductos1{
-    width: 100px;
-    height: 100px;
-    background-color: black;
+.divProductos{
     margin-top: 5px;
-    border-radius: 5px;
-    text-align: center;
+    background-color: black;
+    border-style: none;
+    /* min-width: 100px;
+    height: 100px;
+    background-color: transparent;
+    
+    border-style: outset;
+    border-color: darkgrey;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center; */
 }
 
-.contProductosMobile .divProductos2 {
-    width: 150px;
-    height: 100px;
-    background-color: black;
-    margin-top: 5px;
-    border-radius: 5px;
-    text-align: center;
+.botones {
+ border-radius: 50%;   
 }
+
+/* .iconoBotton{
+    width: auto;
+} */
 
 .secciones {
     width: auto;
     height: 100px;
-    background-color: black ;
+    background-color: #ffffff;
     margin-top: 5px;
 }
 h3 {
-    color: white;
+    color: black;
     font-size: 16px;
+    
 }
+
+@media (min-width: 768px) {
+
+    .seccionMobile{
+        display: none;
+    }
+
+    .seccionDesk {
+        display: block;
+    }
+
+    body {
+        padding: 5px;
+        background-color: black;
+        font-family: 'Encode Sans SC', sans-serif;
+    }
+
+    .logoDabb {
+        height: 100px;
+        width: 250px;
+    }
+
+    .contenedorNav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .contBarra{
+        display: flex;
+        width:30%;      
+    }
+
+    .barraBusqueda, ::placeholder {
+        height: auto;
+        width: 100%;
+        font-family: 'Encode Sans SC', sans-serif;
+        color: #c8a260;
+        background: transparent;
+        /* border-bottom-style: inset; */
+        border-color: #c8a260;
+        border-top-style: none;
+        border-right-style: none;
+        border-left-style: none;
+    }
+
+    .lupa {
+        width: auto;
+        height: 25px;
+        background: transparent;
+        color: #c8a260;
+    }
+
+    .botonBusqueda {
+        background: transparent;
+        border-color: #c8a260;
+        border-style: inset;
+        border-left-style: none;
+        border-top-style: none;
+        cursor: pointer;
+    }
+    .letraBtn {
+        height: 30px;
+        width: 100px;
+        background: transparent;
+        font-family: 'Encode Sans SC', sans-serif;
+        color: #c8a260;
+        border-style: inset;
+        border-color: #c8a260;
+        cursor: pointer;
+    }
+
+    .btnCarrito {
+        background: transparent;
+        border: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .carritoDesk {
+        height: 30px;
+       
+    }
+
+    .contMenu {
+        background-color: #c8a260;
+    }
+
+    .contLista {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 30px;
+        list-style: none;
+        letter-spacing: 1px;
+    }
+
+    .contLista, li {
+        cursor: pointer;
+    }
+
+}
+
